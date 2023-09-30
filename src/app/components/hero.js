@@ -22,9 +22,9 @@ const Hero = () => {
                             <Box><Text>Heavy Duty</Text></Box>
                         </Stack>
                     </Box>
-                    <Box p={'20px'}><Heading>MONSTER Truck. Bringing choas to the streets.</Heading></Box>
+                    <Box pt={'20px'}><Heading>MONSTER Truck. Bringing choas to the streets.</Heading></Box>
                     <Box>
-                        <Text p={'20px'}>The brand that will make your transition to noise successful.
+                        <Text pb={'20px'} pt={'20px'}>The brand that will make your transition to noise successful.
                             Our trucks and services are built from REAL MONSTER experience.
                         </Text>
                         <Button pr={'50px'} pl={'50px'} pt={'20px'} pb={'20px'} fontWeight={'bold'} bg={'#DE522E'} color={'white'}>
