@@ -8,12 +8,11 @@ const Hero = () => {
         <Stack
             minH={'100vh'}
             backgroundImage={
-                'url(https://media.istockphoto.com/id/1252703616/photo/monster-truck.jpg?s=612x612&w=0&k=20&c=k3tT3tVygsZWdU-AemqBCoHGO7GnfUyy98QJIKXtg3Q=)'
+                'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://media.istockphoto.com/id/1252703616/photo/monster-truck.jpg?s=612x612&w=0&k=20&c=k3tT3tVygsZWdU-AemqBCoHGO7GnfUyy98QJIKXtg3Q=)'
             }
             backgroundSize={'cover'}
             backgroundPosition={'center center'}
             color={'white'}
-            backgroundColor="rgba(0, 0, 0, 0.5)"
         >
             <Box m={'auto'}>
                 <Stack direction={'column'}>
@@ -23,7 +22,7 @@ const Hero = () => {
                             <Box><Text>Heavy Duty</Text></Box>
                         </Stack>
                     </Box>
-                    <Box pt={'20px'}><Heading>MONSTER Truck. Bringing choas to the streets.</Heading></Box>
+                    <Box pt={'20px'}><Heading>MONSTER Truck. Bringing chaos to the streets.</Heading></Box>
                     <Box>
                         <Text pb={'20px'} pt={'20px'}>The brand that will make your transition to noise successful.
                             Our trucks and services are built from REAL MONSTER experience.
