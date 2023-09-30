@@ -71,13 +71,12 @@ const Hero = () => {
               READ MORE
             </Button>
             {showVideo && (
-              <AspectRatio maxW='560px' ratio={1}>
+            
               <iframe
                 title='naruto'
                 src='https://www.youtube.com/embed/QhBnZ6NPOY0'
-                allowFullScreen
               />
-            </AspectRatio>
+            
             )}
           </Box>
         </Stack>
