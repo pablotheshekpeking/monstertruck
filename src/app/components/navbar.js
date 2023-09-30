@@ -34,7 +34,7 @@ const Navbar = () => {
             justify={'center'}
         >
             <Box>
-                <Img m={'auto'} w={'25%'} h={'auto'} src='https://media.istockphoto.com/id/1252703616/photo/monster-truck.jpg?s=612x612&w=0&k=20&c=k3tT3tVygsZWdU-AemqBCoHGO7GnfUyy98QJIKXtg3Q=' />
+                <Img />
             </Box>
             <Box
                 display={['block', 'block', 'none', 'none']} // Hide on larger screens
