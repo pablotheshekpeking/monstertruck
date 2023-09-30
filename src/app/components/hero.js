@@ -17,17 +17,17 @@ const Hero = () => {
             <Box m={'auto'}>
                 <Stack direction={'column'}>
                     <Box>
-                        <Stack>
+                        <Stack direction={'row'}>
                             <Box borderRight={'1px solid'} borderColor={'#dddddd'} fontWeight={'bold'}><Text>Monster Trucks</Text></Box>
                             <Box><Text>Heavy Duty</Text></Box>
                         </Stack>
                     </Box>
-                    <Box><Heading>MONSTER Truck. Bringing choas to the streets.</Heading></Box>
+                    <Box p={'20px'}><Heading>MONSTER Truck. Bringing choas to the streets.</Heading></Box>
                     <Box>
-                        <Text>The brand that will make your transition to noise successful.
+                        <Text p={'20px'}>The brand that will make your transition to noise successful.
                             Our trucks and services are built from REAL MONSTER experience.
                         </Text>
-                        <Button pr={'50px'} pl={'50px'} pt={'20px'} pb={'20px'} fontWeight={'bold'} bg={'#DE522E'}>
+                        <Button pr={'50px'} pl={'50px'} pt={'20px'} pb={'20px'} fontWeight={'bold'} bg={'#DE522E'} color={'white'}>
                             READ MORE
                         </Button>
                     </Box>
