@@ -110,31 +110,33 @@ const Navbar = () => {
             </Drawer>
             {/* Desktop Links */}
             <Hide below='lg'>
-                <Link href={'../'}>
-                    <Box _hover={{ backgroundColor: 'red' }}>
-                        <Text p={'20px'}>PRODUCTS & SERVICES</Text>
-                    </Box>
-                </Link>
-                <Link href={'../'}>
-                    <Box _hover={{ backgroundColor: 'red' }}>
-                        <Text p={'20px'}>ABOUT</Text>
-                    </Box>
-                </Link>
-                <Link href={'../'}>
-                    <Box _hover={{ backgroundColor: 'red' }}>
-                        <Text p={'20px'}>CONTACT</Text>
-                    </Box>
-                </Link>
-                <Link href={'../'}>
-                    <Box _hover={{ backgroundColor: 'red' }}>
-                        <Text p={'20px'}>PRESS & EVENTS</Text>
-                    </Box>
-                </Link>
-                <Link href={'../'}>
-                    <Box _hover={{ backgroundColor: 'red' }}>
-                        <Text p={'20px'}>FIND A DEALER</Text>
-                    </Box>
-                </Link>
+                <Box>
+                    <Link href={'../'}>
+                        <Box _hover={{ backgroundColor: 'red' }}>
+                            <Text p={'20px'}>PRODUCTS & SERVICES</Text>
+                        </Box>
+                    </Link>
+                    <Link href={'../'}>
+                        <Box _hover={{ backgroundColor: 'red' }}>
+                            <Text p={'20px'}>ABOUT</Text>
+                        </Box>
+                    </Link>
+                    <Link href={'../'}>
+                        <Box _hover={{ backgroundColor: 'red' }}>
+                            <Text p={'20px'}>CONTACT</Text>
+                        </Box>
+                    </Link>
+                    <Link href={'../'}>
+                        <Box _hover={{ backgroundColor: 'red' }}>
+                            <Text p={'20px'}>PRESS & EVENTS</Text>
+                        </Box>
+                    </Link>
+                    <Link href={'../'}>
+                        <Box _hover={{ backgroundColor: 'red' }}>
+                            <Text p={'20px'}>FIND A DEALER</Text>
+                        </Box>
+                    </Link>
+                </Box>
             </Hide>
         </Stack>
     );
