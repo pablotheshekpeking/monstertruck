@@ -13,7 +13,7 @@ const Navbar = () => {
             <Link href={'../'}><Box _hover={{ backgroundColor: 'red',}}><Text>CONTACT</Text></Box></Link>
             <Link href={'../'}><Box _hover={{ backgroundColor: 'red',}}><Text>PRESS & EVENTS</Text></Box></Link>
             <Link href={'../'}><Box _hover={{ backgroundColor: 'red',}}><Text>FIND A DEALER</Text></Box></Link>
-        </Stack>
+        </Stack> 
      );
 }
  
