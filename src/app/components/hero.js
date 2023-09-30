@@ -9,6 +9,7 @@ import {
   Img,
   Button,
 } from '@chakra-ui/react';
+import Navbar from './navbar';
 
 const Hero = () => {
   return (
@@ -21,6 +22,7 @@ const Hero = () => {
       backgroundPosition={'center center'}
       color={'white'}
     >
+        <Navbar />
       <Box m={'auto'}>
         <Stack direction={'column'}>
           <Box>
