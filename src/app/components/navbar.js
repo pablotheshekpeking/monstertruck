@@ -34,7 +34,7 @@ const Navbar = () => {
             justify={'center'}
         >
             <Box>
-                <Img />
+                <Img src='https://media.istockphoto.com/id/1252703616/photo/monster-truck.jpg?s=612x612&w=0&k=20&c=k3tT3tVygsZWdU-AemqBCoHGO7GnfUyy98QJIKXtg3Q=' />
             </Box>
             <Box
                 display={['block', 'block', 'none', 'none']} // Hide on larger screens
@@ -53,10 +53,10 @@ const Navbar = () => {
                 finalFocusRef={btnRef}
             >
                 <DrawerOverlay>
-                    <DrawerContent bg="#3d3d50">
+                    <DrawerContent bg="#3d3d50" color="white">
                         <DrawerCloseButton color="white" />
                         <DrawerHeader borderBottomWidth="1px" color="white">
-                            Menu
+                            Monster Trucks
                         </DrawerHeader>
                         <DrawerBody>
                             <Link href={'../'}>
