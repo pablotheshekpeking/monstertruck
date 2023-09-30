@@ -75,7 +75,7 @@ const Hero = () => {
                 width="100%"
                 autoPlay
                 controls
-                src="https://www.youtube.com/watch?v=3qMRaIJ3D3o" // Replace with your video source
+                src="/vid1.webm" // Replace with your video source
               />
             )}
           </Box>
