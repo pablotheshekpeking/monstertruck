@@ -41,6 +41,7 @@ const Navbar = () => {
                 ref={btnRef}
                 onClick={onOpen}
                 cursor="pointer"
+                p={'20px'}
             >
                 ☰
             </Box>
