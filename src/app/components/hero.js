@@ -8,7 +8,7 @@ import {
   Heading,
   Img,
   Button,
-  Video,
+  AspectRatio,
 } from '@chakra-ui/react';
 
 const Hero = () => {
@@ -71,12 +71,13 @@ const Hero = () => {
               READ MORE
             </Button>
             {showVideo && (
-              <Video
-                width="100%"
-                autoPlay
-                controls
-                src="/vid1.webm" // Replace with your video source
+              <AspectRatio maxW='560px' ratio={1}>
+              <iframe
+                title='naruto'
+                src='https://www.youtube.com/embed/QhBnZ6NPOY0'
+                allowFullScreen
               />
+            </AspectRatio>
             )}
           </Box>
         </Stack>
