@@ -34,7 +34,7 @@ const Navbar = () => {
             justify={'center'}
         >
             <Box>
-                <Heading fontWeight={'bolder'} p={'20px'} size={'md'}>Monster Trucks</Heading>
+                <Link href={'../'}><Heading fontWeight={'bolder'} p={'20px'} size={'md'}>Monster Trucks</Heading></Link>
             </Box>
             <Box
                 display={['block', 'block', 'none', 'none']} // Hide on larger screens
