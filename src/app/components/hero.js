@@ -74,7 +74,7 @@ const Hero = () => {
             
               <iframe
                 title='naruto'
-                src='https://www.youtube.com/watch?v=qui0hY7cihw'
+                src='/vid1.webm'
               />
             
             )}
