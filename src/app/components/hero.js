@@ -13,12 +13,13 @@ const Hero = () => {
             backgroundSize={'cover'}
             backgroundPosition={'center center'}
             color={'white'}
+            backgroundColor="rgba(0, 0, 0, 0.5)"
         >
             <Box m={'auto'}>
                 <Stack direction={'column'}>
                     <Box>
                         <Stack direction={'row'}>
-                            <Box borderRight={'1px solid'} borderColor={'#dddddd'} fontWeight={'bold'}><Text>Monster Trucks</Text></Box>
+                            <Box borderRight={'1px solid'} borderColor={'#dddddd'} pr={'10px'} fontWeight={'bold'}><Text>Monster Trucks</Text></Box>
                             <Box><Text>Heavy Duty</Text></Box>
                         </Stack>
                     </Box>
