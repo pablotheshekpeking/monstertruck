@@ -12,8 +12,9 @@ const Hero = () => {
             }
             backgroundSize={'cover'}
             backgroundPosition={'center center'}
+            color={'white'}
         >
-            <Box>
+            <Box m={'auto'}>
                 <Stack direction={'column'}>
                     <Box>
                         <Stack>
