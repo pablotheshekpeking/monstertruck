@@ -26,7 +26,7 @@ const Navbar = () => {
     return (
         <Stack
             color={'white'}
-            direction={['column', 'column', 'row', 'row']}
+            direction={'row'}
             bg={'#3d3d50'}
             w={'100%'}
             pr={'50px'}
@@ -34,7 +34,7 @@ const Navbar = () => {
             justify={'center'}
         >
             <Box>
-                <Img src='https://media.istockphoto.com/id/1252703616/photo/monster-truck.jpg?s=612x612&w=0&k=20&c=k3tT3tVygsZWdU-AemqBCoHGO7GnfUyy98QJIKXtg3Q=' />
+                <Img w={'100%'} h={'auto'} src='https://media.istockphoto.com/id/1252703616/photo/monster-truck.jpg?s=612x612&w=0&k=20&c=k3tT3tVygsZWdU-AemqBCoHGO7GnfUyy98QJIKXtg3Q=' />
             </Box>
             <Box
                 display={['block', 'block', 'none', 'none']} // Hide on larger screens
