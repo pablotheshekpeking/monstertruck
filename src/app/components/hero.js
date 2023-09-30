@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Stack,
   Box,
@@ -8,20 +8,9 @@ import {
   Heading,
   Img,
   Button,
-  AspectRatio,
 } from '@chakra-ui/react';
 
 const Hero = () => {
-  const [showVideo, setShowVideo] = useState(false);
-
-  const handleMouseEnter = () => {
-    setShowVideo(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowVideo(false);
-  };
-
   return (
     <Stack
       minH={'100vh'}
@@ -65,19 +54,9 @@ const Hero = () => {
               fontWeight={'bold'}
               bg={'#DE522E'}
               color={'white'}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
             >
               READ MORE
             </Button>
-            {showVideo && (
-            
-              <iframe
-                title='naruto'
-                src='/vid1.webm'
-              />
-            
-            )}
           </Box>
         </Stack>
       </Box>
