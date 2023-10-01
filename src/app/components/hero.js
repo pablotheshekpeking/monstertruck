@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState } from 'react';
 import {
     Stack,
@@ -7,12 +5,44 @@ import {
     Text,
     Heading,
     Button,
-    Tooltip, // Import Tooltip
+    Tooltip,
 } from '@chakra-ui/react';
 import Navbar from './navbar';
 
-const Hero = () => {
+const VideoTooltip = ({ children, videoUrl }) => {
     const [showTooltip, setShowTooltip] = useState(false);
+
+    return (
+        <Tooltip
+            label={
+                <Box>
+                    <video
+                        src={videoUrl}
+                        autoPlay
+                        muted
+                        controls
+                        style={{ width: '100%', maxWidth: '300px' }}
+                    />
+                </Box>
+            }
+            isOpen={showTooltip}
+            placement="top"
+            hasArrow
+            p={'20px'}
+        >
+            <Box
+                onMouseEnter={() => setShowTooltip(true)}
+                onMouseLeave={() => setShowTooltip(false)}
+                cursor="pointer"
+            >
+                {children}
+            </Box>
+        </Tooltip>
+    );
+};
+
+const Hero = () => {
+    const videoUrl = '/vid1.webm'; // Replace with the actual video URL
 
     return (
         <Stack
@@ -50,13 +80,7 @@ const Hero = () => {
                             The brand that will make your transition to noise successful.
                             Our trucks and services are built from REAL MONSTER experience.
                         </Text>
-                        <Tooltip
-                            hasArrow
-                            label="Click to learn more about us" // Tooltip content
-                            isOpen={showTooltip}
-                            placement="bottom"
-                            p={'20px'}
-                        >
+                        <VideoTooltip videoUrl={videoUrl}>
                             <Button
                                 pr={'50px'}
                                 pl={'50px'}
@@ -65,12 +89,10 @@ const Hero = () => {
                                 fontWeight={'bold'}
                                 bg={'#DE522E'}
                                 color={'white'}
-                                onMouseEnter={() => setShowTooltip(true)}
-                                onMouseLeave={() => setShowTooltip(false)}
                             >
                                 READ MORE
                             </Button>
-                        </Tooltip>
+                        </VideoTooltip>
                     </Box>
                 </Stack>
             </Box>
