@@ -6,6 +6,7 @@ import Hero from './components/hero';
 import Discover from './components/discover';
 import Hero2 from './components/hero2';
 import Footer from './components/footer';
+import Footer2 from './components/footer2';
 
 export function Providers({ children }) {
   return (
@@ -18,6 +19,7 @@ export function Providers({ children }) {
         <Hero2 />
 
         <Footer />
+        <Footer2 />
       </ChakraProvider>
     </CacheProvider>
   );
