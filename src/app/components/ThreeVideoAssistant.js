@@ -11,7 +11,7 @@ function ThreeVideoAssistant({ showVideo }) {
     const texture = new THREE.VideoTexture(videoRef.current);
     texture.minFilter = THREE.LinearFilter;
     texture.magFilter = THREE.LinearFilter;
-    texture.format = THREE.RGBFormat;
+    texture.format = THREE.RGBAFormat;
     return texture;
   }, []);
 
