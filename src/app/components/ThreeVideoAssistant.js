@@ -3,11 +3,9 @@ import { useFrame, extend, Canvas } from 'react-three-fiber';
 import * as THREE from 'three';
 
 // Import necessary components for WebGL2Renderer
-import { WebGLMultisampleRenderTarget } from 'three/examples/jsm/webgl/WebGLMultisampleRenderTarget.js';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
-import { CopyShader } from 'three/examples/jsm/shaders/CopyShader.js';
 
 extend({ EffectComposer, RenderPass, ShaderPass });
 
