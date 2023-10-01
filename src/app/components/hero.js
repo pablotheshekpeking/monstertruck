@@ -70,7 +70,7 @@ const Hero = () => {
         </Stack>
       </Box>
 
-      {/* Video Element */}
+      {/* Video Element 
       {showVideo && (
         <video
           src="/vid1.webm" // Adjust the path to your video file
@@ -85,13 +85,27 @@ const Hero = () => {
             zIndex: 1, // Show the video
           }}
         />
-      )}
+      )} */}
 
       {/* Three.js Canvas for Video Assistant */}
       <Canvas
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: showVideo ? 0 : -1 }}
       >
-        {showVideo && <ThreeVideoAssistant showVideo={showVideo} />}
+        {showVideo && (
+        <video
+          src="/vid1.webm" // Adjust the path to your video file
+          autoPlay
+          loop
+          muted
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            width: '100%',
+            zIndex: 1, // Show the video
+          }}
+        />
+      )}
       </Canvas>
     </Stack>
   );
