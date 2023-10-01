@@ -1,21 +1,18 @@
 'use client'
 
-// components/Hero.js
 import React, { useState } from 'react';
 import {
   Stack,
   Box,
   Text,
   Heading,
-  Img,
   Button,
+  Tooltip, // Import Tooltip
 } from '@chakra-ui/react';
 import Navbar from './navbar';
-import { Canvas } from '@react-three/fiber';
-import ThreeVideoAssistant from './ThreeVideoAssistant';
 
 const Hero = () => {
-  const [showVideo, setShowVideo] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   return (
     <Stack
@@ -53,46 +50,28 @@ const Hero = () => {
               The brand that will make your transition to noise successful.
               Our trucks and services are built from REAL MONSTER experience.
             </Text>
-            <Button
-              pr={'50px'}
-              pl={'50px'}
-              pt={'20px'}
-              pb={'20px'}
-              fontWeight={'bold'}
-              bg={'#DE522E'}
-              color={'white'}
-              onMouseEnter={() => setShowVideo(true)} // Show video on hover
-              onMouseLeave={() => setShowVideo(false)} // Hide video when not hovering
+            <Tooltip // Add Tooltip component
+              label="Click to learn more" // Tooltip content
+              isOpen={showTooltip} // Show the tooltip when hovering
+              placement="top"
             >
-              READ MORE
-            </Button>
+              <Button
+                pr={'50px'}
+                pl={'50px'}
+                pt={'20px'}
+                pb={'20px'}
+                fontWeight={'bold'}
+                bg={'#DE522E'}
+                color={'white'}
+                onMouseEnter={() => setShowTooltip(true)} // Show the tooltip on hover
+                onMouseLeave={() => setShowTooltip(false)} // Hide the tooltip on hover out
+              >
+                READ MORE
+              </Button>
+            </Tooltip>
           </Box>
         </Stack>
       </Box>
-
-      {/* Video Element */}
-      {showVideo && (
-        <video
-          src="/vid1.webm" // Adjust the path to your video file
-          autoPlay
-          loop
-          muted
-          style={{
-            position: 'fixed',
-            bottom: 0,
-            left: 0,
-            width: '100%',
-            zIndex: 1, // Show the video
-          }}
-        />
-      )}
-
-      {/* Three.js Canvas for Video Assistant */}
-      <Canvas
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: showVideo ? 0 : -1 }}
-      >
-        {showVideo && <ThreeVideoAssistant showVideo={showVideo} />}
-      </Canvas>
     </Stack>
   );
 };
