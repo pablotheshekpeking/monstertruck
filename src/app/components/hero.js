@@ -50,10 +50,10 @@ const Hero = () => {
               The brand that will make your transition to noise successful.
               Our trucks and services are built from REAL MONSTER experience.
             </Text>
-            <Tooltip // Add Tooltip component
-              label="Click to learn more" // Tooltip content
-              isOpen={showTooltip} // Show the tooltip when hovering
-              placement="top"
+            <Tooltip 
+              label="Click to learn more about us" // Tooltip content
+              isOpen={showTooltip} 
+              placement="bottom"
             >
               <Button
                 pr={'50px'}
@@ -63,8 +63,8 @@ const Hero = () => {
                 fontWeight={'bold'}
                 bg={'#DE522E'}
                 color={'white'}
-                onMouseEnter={() => setShowTooltip(true)} // Show the tooltip on hover
-                onMouseLeave={() => setShowTooltip(false)} // Hide the tooltip on hover out
+                onMouseEnter={() => setShowTooltip(true)} 
+                onMouseLeave={() => setShowTooltip(false)} 
               >
                 READ MORE
               </Button>
