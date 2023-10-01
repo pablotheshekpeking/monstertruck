@@ -166,7 +166,7 @@ const Navbar = () => {
                 </Link>
                 <Link href={'../'}>
                     <Box _hover={{ backgroundColor: 'red' }}>
-                    <VideoTooltip videoUrl={videoUrl}><Text p={'20px'}><CiLocationOn /> FIND A DEALER</Text></VideoTooltip>
+                    <VideoTooltip videoUrl={videoUrl}><Text p={'20px'}><CiLocationOn />FIND A DEALER</Text></VideoTooltip>
                     </Box>
                 </Link>
             </Hide>
