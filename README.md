@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+NOTICE: 
+FOR THE ASSISTANT TO SPEAK CLICK ANYWHERE ON THE SCREEN. 
+THE BUTTONS WHERE THE ASSISTANT SPEAKS ARE AS FOLLOWS: 
+FIND A DEALER ON THE NAVBAR, READ MORE & DISCOVER OUR STORY 
+
 ## Getting Started
 
 First, run the development server:
