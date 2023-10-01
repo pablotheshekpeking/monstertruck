@@ -4,7 +4,7 @@ import React from "react";
 import { Stack, Box, Text, Heading } from "@chakra-ui/react";
 import Link from 'next/link';
 const Footer = () => {
-    return ( 
+    return (
         <Stack
             color={'white'}
             direction={'row'}
@@ -16,29 +16,31 @@ const Footer = () => {
         >
             <Box><Link href={'../'}><Heading fontWeight={'bolder'} p={'20px'} size={'md'}>Monster Trucks</Heading></Link></Box>
             <Box>
-            <Link href={'../'}>
-                    <Box _hover={{ color: 'black' }}>
-                        <Text p={'20px'}>PRODUCTS & SERVICES</Text>
-                    </Box>
-                </Link>
-                <Link href={'../'}>
-                    <Box _hover={{ color: 'black' }}>
-                        <Text p={'20px'}>ABOUT</Text>
-                    </Box>
-                </Link>
-                <Link href={'../'}>
-                    <Box _hover={{ color: 'black' }}>
-                        <Text p={'20px'}>CONTACT</Text>
-                    </Box>
-                </Link>
-                <Link href={'../'}>
-                    <Box _hover={{ color: 'black' }}>
-                        <Text p={'20px'}>PRESS & EVENTS</Text>
-                    </Box>
-                </Link>
+                <Stack direction={'row'}>
+                    <Link href={'../'}>
+                        <Box _hover={{ color: 'black' }}>
+                            <Text p={'20px'}>PRODUCTS & SERVICES</Text>
+                        </Box>
+                    </Link>
+                    <Link href={'../'}>
+                        <Box _hover={{ color: 'black' }}>
+                            <Text p={'20px'}>ABOUT</Text>
+                        </Box>
+                    </Link>
+                    <Link href={'../'}>
+                        <Box _hover={{ color: 'black' }}>
+                            <Text p={'20px'}>CONTACT</Text>
+                        </Box>
+                    </Link>
+                    <Link href={'../'}>
+                        <Box _hover={{ color: 'black' }}>
+                            <Text p={'20px'}>PRESS & EVENTS</Text>
+                        </Box>
+                    </Link>
+                </Stack>
             </Box>
         </Stack>
-     );
+    );
 }
- 
+
 export default Footer;
