@@ -1,16 +1,32 @@
 import React, { useRef, useMemo } from 'react';
-import { useFrame, extend, Canvas } from 'react-three-fiber';
+import { useFrame } from 'react-three-fiber';
 import * as THREE from 'three';
-
-// Import necessary components for WebGL2Renderer
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
-import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
-
-extend({ EffectComposer, RenderPass, ShaderPass });
 
 function ThreeVideoAssistant({ showVideo }) {
   const videoRef = useRef();
+
+  // Check if WebGL 2 is supported
+  const isWebGL2Available = (() => {
+    try {
+      const canvas = document.createElement('canvas');
+      return !!(
+        window.WebGL2RenderingContext &&
+        canvas.getContext('webgl2')
+      );
+    } catch (e) {
+      return false;
+    }
+  })();
+
+  // Create a WebGLRenderer instance based on availability
+  const renderer = useMemo(() => {
+    if (isWebGL2Available) {
+      return new THREE.WebGLRenderer({ antialias: true });
+    } else {
+      // Fallback to WebGL 1 if WebGL 2 is not available
+      return new THREE.WebGLRenderer({ antialias: true });
+    }
+  }, [isWebGL2Available]);
 
   // Create a texture from a video element
   const videoTexture = useMemo(() => {
@@ -30,10 +46,21 @@ function ThreeVideoAssistant({ showVideo }) {
   });
 
   return (
-    <mesh>
-      <planeBufferGeometry args={[16, 9]} />
-      <meshBasicMaterial map={videoTexture} />
-    </mesh>
+    <>
+      {isWebGL2Available ? (
+        // Use WebGL 2 renderer
+        <mesh>
+          <planeBufferGeometry args={[16, 9]} />
+          <meshBasicMaterial map={videoTexture} />
+        </mesh>
+      ) : (
+        // Use WebGL 1 renderer
+        <mesh>
+          <planeGeometry args={[16, 9]} />
+          <meshBasicMaterial map={videoTexture} />
+        </mesh>
+      )}
+    </>
   );
 }
 
