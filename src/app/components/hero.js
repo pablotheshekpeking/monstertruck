@@ -65,32 +65,33 @@ const Hero = () => {
                         >
                             READ MORE
                         </Button>
-                        {/* Three.js Canvas for Video Assistant */}
+                        {/* Three.js Canvas for Video Assistant 
                         <Canvas
                             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: showVideo ? 0 : -1 }}
                         >
                             {showVideo && <ThreeVideoAssistant showVideo={showVideo} />}
-                        </Canvas>
+                        </Canvas>*/}
+                        {/* Video Element */}
+                        {showVideo && (
+                            <video
+                                src="/vid1.webm" // Adjust the path to your video file
+                                autoPlay
+                                loop
+                                muted
+                                style={{
+                                    position: 'fixed',
+                                    bottom: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    zIndex: 1, // Show the video
+                                }}
+                            />
+                        )}
                     </Box>
                 </Stack>
             </Box>
 
-            {/* Video Element */}
-            {showVideo && (
-                <video
-                    src="/vid1.webm" // Adjust the path to your video file
-                    autoPlay
-                    loop
-                    muted
-                    style={{
-                        position: 'fixed',
-                        bottom: 0,
-                        left: 0,
-                        width: '100%',
-                        zIndex: 1, // Show the video
-                    }}
-                />
-            )}
+
 
 
         </Stack>
