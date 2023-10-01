@@ -7,12 +7,13 @@ const Footer = () => {
     return (
         <Stack
             color={'white'}
-            direction={['column', 'column', 'row', 'row']}
+            direction={'row'}
             bg={'#241F21'}
             w={'100%'}
             pr={'50px'}
             pl={'50px'}
             justify={'center'}
+            fontSize={['8px', '8px', '15px', '15px']}
         >
             <Box><Link href={'../'}><Heading fontWeight={'bolder'} p={'20px'} size={'md'}>Monster Trucks</Heading></Link></Box>
             <Box>
