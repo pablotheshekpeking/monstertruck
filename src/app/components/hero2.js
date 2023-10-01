@@ -33,6 +33,7 @@ const VideoTooltip = ({ children, videoUrl }) => {
                 onMouseLeave={() => setShowTooltip(false)}
                 cursor="pointer"
                 bg={'white'}
+                m={'auto'}
                 _hover={{ background: '#DE522E', color: 'white', }}
             >
                 {children}
@@ -56,7 +57,7 @@ const Hero2 = () => {
             justify={'center'}
         >
             <Box m={'auto'}>
-                <Stack direction={'column'}>
+                <Stack direction={'column'} m={'auto'} textAlign={'center'}>
                     <Box pt={'20px'}>
                         <Heading>Inspired by sustainability</Heading>
                     </Box>
@@ -73,6 +74,7 @@ const Hero2 = () => {
                                 pb={'20px'}
                                 fontWeight={'bold'}
                                 bg={'white'}
+                                m={'auto'}
                                 color={'#DE522E'}
                                 _hover={{ background: '#DE522E', color: 'white', }}
                             >
