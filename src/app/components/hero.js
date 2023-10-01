@@ -19,7 +19,6 @@ const VideoTooltip = ({ children, videoUrl }) => {
                     <video
                         src={videoUrl}
                         autoPlay
-                        muted
                         controls
                         style={{ width: '100%', maxWidth: '300px' }}
                     />
@@ -43,7 +42,7 @@ const VideoTooltip = ({ children, videoUrl }) => {
 };
 
 const Hero = () => {
-    const videoUrl = '/vid1.webm'; // Replace with the actual video URL
+    const videoUrl = '/readmorevid.mov'; // Replace with the actual video URL
 
     return (
         <Stack
