@@ -9,6 +9,7 @@ import {
     Img,
     Button,
     Hide,
+    Tooltip,
     Drawer,
     DrawerOverlay,
     DrawerContent,
@@ -19,7 +20,40 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link';
 
+const VideoTooltip = ({ children, videoUrl }) => {
+    const [showTooltip, setShowTooltip] = useState(false);
+
+    return (
+        <Tooltip
+            label={
+                <Box>
+                    <video
+                        src={videoUrl}
+                        autoPlay
+                        controls
+                        style={{ width: '100%', maxWidth: '300px' }}
+                    />
+                </Box>
+            }
+            isOpen={showTooltip}
+            placement="top"
+            hasArrow
+            p={'20px'}
+        >
+            <Button
+                onMouseEnter={() => setShowTooltip(true)}
+                onMouseLeave={() => setShowTooltip(false)}
+                cursor="pointer"
+                bg={'#DE522E'}
+            >
+                {children}
+            </Button>
+        </Tooltip>
+    );
+};
+
 const Navbar = () => {
+    const videoUrl = '/location.mov';
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef();
 
@@ -132,7 +166,7 @@ const Navbar = () => {
                 </Link>
                 <Link href={'../'}>
                     <Box _hover={{ backgroundColor: 'red' }}>
-                        <Text p={'20px'}>FIND A DEALER</Text>
+                    <VideoTooltip videoUrl={videoUrl}><Text p={'20px'}>FIND A DEALER</Text></VideoTooltip>
                     </Box>
                 </Link>
             </Hide>
