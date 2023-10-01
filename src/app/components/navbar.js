@@ -30,7 +30,7 @@ const VideoTooltip = ({ children, videoUrl }) => {
                     <video
                         src={videoUrl}
                         autoPlay
-                        controls
+                        loop
                         style={{ width: '100%', maxWidth: '300px' }}
                     />
                 </Box>
