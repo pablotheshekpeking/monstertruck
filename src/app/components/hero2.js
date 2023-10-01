@@ -62,7 +62,7 @@ const Hero2 = () => {
                         <Heading>Inspired by sustainability</Heading>
                     </Box>
                     <Box>
-                        <Text pb={'20px'} pt={'20px'}>
+                        <Text pb={'50px'} pt={'50px'}>
                         Inspired to create a new benchmark for Class 4-5 trucks, 
                         we are proud to introduce a purely electric truck that is safe, reliable and efficient.
                         </Text>

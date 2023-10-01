@@ -5,6 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Hero from './components/hero';
 import Discover from './components/discover';
 import Hero2 from './components/hero2';
+import Footer from './components/footer';
 
 export function Providers({ children }) {
   return (
@@ -15,6 +16,8 @@ export function Providers({ children }) {
         <Discover />
 
         <Hero2 />
+
+        <Footer />
       </ChakraProvider>
     </CacheProvider>
   );
