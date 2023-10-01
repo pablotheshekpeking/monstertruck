@@ -40,14 +40,13 @@ const VideoTooltip = ({ children, videoUrl }) => {
             hasArrow
             p={'20px'}
         >
-            <Button
+            <Text
                 onMouseEnter={() => setShowTooltip(true)}
                 onMouseLeave={() => setShowTooltip(false)}
                 cursor="pointer"
-                bg={'#DE522E'}
             >
                 {children}
-            </Button>
+            </Text>
         </Tooltip>
     );
 };
