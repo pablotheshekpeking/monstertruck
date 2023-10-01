@@ -72,7 +72,7 @@ const Hero = () => {
 
       {/* Video Element */}
       <video
-        src="/videos/monster-truck.mp4" // Adjust the path to your video file
+        src="/vid1.webm" // Adjust the path to your video file
         autoPlay
         loop
         muted
