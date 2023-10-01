@@ -65,12 +65,12 @@ const Hero = () => {
                         >
                             READ MORE
                         </Button>
-                        {/* Three.js Canvas for Video Assistant 
+                        {/* Three.js Canvas for Video Assistant */}
                         <Canvas
                             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: showVideo ? 0 : -1 }}
                         >
                             {showVideo && <ThreeVideoAssistant showVideo={showVideo} />}
-                        </Canvas>*/}
+                        </Canvas>
                         {/* Video Element */}
                         {showVideo && (
                             <video
