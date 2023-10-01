@@ -34,6 +34,7 @@ const VideoTooltip = ({ children, videoUrl }) => {
                 onMouseEnter={() => setShowTooltip(true)}
                 onMouseLeave={() => setShowTooltip(false)}
                 cursor="pointer"
+                bg={'#DE522E'}
             >
                 {children}
             </Button>
