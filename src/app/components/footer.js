@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import { Stack, Box, Text } from "@chakra-ui/react";
+import { Stack, Box, Text, Heading } from "@chakra-ui/react";
 import Link from 'next/link';
 const Footer = () => {
     return ( 
@@ -34,11 +34,6 @@ const Footer = () => {
                 <Link href={'../'}>
                     <Box _hover={{ color: 'black' }}>
                         <Text p={'20px'}>PRESS & EVENTS</Text>
-                    </Box>
-                </Link>
-                <Link href={'../'}>
-                    <Box _hover={{ color: 'black' }}>
-                    <VideoTooltip videoUrl={videoUrl}><Text p={'20px'}>FIND A DEALER</Text></VideoTooltip>
                     </Box>
                 </Link>
             </Box>
