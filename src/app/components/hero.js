@@ -1,6 +1,5 @@
 'use client'
 
-// components/Hero.js
 import React, { useState } from 'react';
 import {
   Stack,
@@ -61,8 +60,8 @@ const Hero = () => {
               fontWeight={'bold'}
               bg={'#DE522E'}
               color={'white'}
-              onMouseEnter={() => setShowVideo(true)}
-              onMouseLeave={() => setShowVideo(false)}
+              onMouseEnter={() => setShowVideo(true)} // Show video on hover
+              onMouseLeave={() => setShowVideo(false)} // Hide video when not hovering
             >
               READ MORE
             </Button>
@@ -71,24 +70,25 @@ const Hero = () => {
       </Box>
 
       {/* Video Element */}
-      <video
-        src="/vid1.webm" // Adjust the path to your video file
-        autoPlay
-        loop
-        muted
-        style={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          width: '100%',
-          zIndex: showVideo ? -1 : 1, // Make sure the video is behind the 3D assistant
-          display: showVideo ? 'none' : 'block', // Hide the video when the assistant is active
-        }}
-      />
+      {showVideo && (
+        <video
+          src="/vid1.webm" // Adjust the path to your video file
+          autoPlay
+          loop
+          muted
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            width: '100%',
+            zIndex: 1, // Show the video
+          }}
+        />
+      )}
 
       {/* Three.js Canvas for Video Assistant */}
       <Canvas
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: showVideo ? 1 : -1 }}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: showVideo ? 0 : -1 }}
       >
         {showVideo && <ThreeVideoAssistant showVideo={showVideo} />}
       </Canvas>
