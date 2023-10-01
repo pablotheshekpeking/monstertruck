@@ -18,6 +18,7 @@ import {
     DrawerBody,
     useDisclosure,
 } from '@chakra-ui/react';
+import { CiLocationOn } from 'react-icons/ci'
 import Link from 'next/link';
 
 const VideoTooltip = ({ children, videoUrl }) => {
@@ -134,7 +135,7 @@ const Navbar = () => {
                                     onClick={onClose}
                                     cursor="pointer"
                                 >
-                                    <Text p={'20px'}>FIND A DEALER</Text>
+                                    <Text p={'20px'}><CiLocationOn /> FIND A DEALER</Text>
                                 </Box>
                             </Link>
                         </DrawerBody>
@@ -165,7 +166,7 @@ const Navbar = () => {
                 </Link>
                 <Link href={'../'}>
                     <Box _hover={{ backgroundColor: 'red' }}>
-                    <VideoTooltip videoUrl={videoUrl}><Text p={'20px'}>FIND A DEALER</Text></VideoTooltip>
+                    <VideoTooltip videoUrl={videoUrl}><Text p={'20px'}><CiLocationOn /> FIND A DEALER</Text></VideoTooltip>
                     </Box>
                 </Link>
             </Hide>

@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <Stack
             color={'white'}
-            direction={'row'}
+            direction={['column', 'column', 'row', 'row']}
             bg={'#241F21'}
             w={'100%'}
             pr={'50px'}
