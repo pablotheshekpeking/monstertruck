@@ -1,41 +1,27 @@
 // components/VideoPlayer.js
-import React, { useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 
 const VideoPlayer = () => {
-  const [videoEnded, setVideoEnded] = useState(false);
+  const videoRef = useRef(null);
 
-  useEffect(() => {
-    const videoElement = document.getElementById('videoPlayer');
-
-    const handleVideoEnd = () => {
-      setVideoEnded(true);
-    };
-
-    if (videoElement) {
-      videoElement.addEventListener('ended', handleVideoEnd);
+  const handleVideoEnded = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
     }
-
-    return () => {
-      if (videoElement) {
-        videoElement.removeEventListener('ended', handleVideoEnd);
-      }
-    };
-  }, []);
+  };
 
   return (
     <video
-      id="videoPlayer"
+      ref={videoRef}
       src="/assistant.mov" // Replace with the path to your video file
-      autoPlay={!videoEnded}
-      loop={!videoEnded}
-      controls
+      autoPlay
+      onEnded={handleVideoEnded} // Pause the video when it ends
       style={{
         position: 'fixed',
         bottom: '0',
         left: '5px',
         width: '200px', // Set the desired width
         zIndex: '9999', // Adjust the z-index to be above other content
-        display: videoEnded ? 'none' : 'block',
       }}
     />
   );
