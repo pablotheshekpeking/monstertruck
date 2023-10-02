@@ -1,8 +1,21 @@
 // components/VideoPlayer.js
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 const VideoPlayer = () => {
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    const playPromise = videoRef.current.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(_ => {
+        // Autoplay started
+      }).catch(error => {
+        // Autoplay failed, you can try to start the video manually on user interaction
+        // videoRef.current.play();
+      });
+    }
+  }, []);
 
   const handleVideoEnded = () => {
     if (videoRef.current) {
@@ -15,8 +28,7 @@ const VideoPlayer = () => {
       ref={videoRef}
       src="/assistant.mov" // Replace with the path to your video file
       autoPlay
-      controls
-      loop={handleVideoEnded}
+      playsInline // Required for autoplay on some devices
       onEnded={handleVideoEnded} // Pause the video when it ends
       style={{
         position: 'fixed',
