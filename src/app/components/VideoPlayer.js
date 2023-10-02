@@ -26,8 +26,8 @@ const VideoPlayer = () => {
     <video
       id="videoPlayer"
       src="/assistant.mov" // Replace with the path to your video file
-      autoPlay
-      loop
+      autoPlay={!videoEnded}
+      loop={!videoEnded}
       controls
       style={{
         position: 'fixed',
