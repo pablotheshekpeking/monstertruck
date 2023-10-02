@@ -7,6 +7,7 @@ import Discover from './components/discover';
 import Hero2 from './components/hero2';
 import Footer from './components/footer';
 import Footer2 from './components/footer2';
+import VideoPlayer from './components/VideoPlayer';
 
 export function Providers({ children }) {
   return (
@@ -20,6 +21,7 @@ export function Providers({ children }) {
 
         <Footer />
         <Footer2 />
+        <VideoPlayer />
       </ChakraProvider>
     </CacheProvider>
   );
