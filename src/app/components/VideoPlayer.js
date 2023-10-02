@@ -16,7 +16,7 @@ const VideoPlayer = () => {
       src="/assistant.mov" // Replace with the path to your video file
       autoPlay
       controls
-      loop
+      loop={handleVideoEnded}
       onEnded={handleVideoEnded} // Pause the video when it ends
       style={{
         position: 'fixed',
