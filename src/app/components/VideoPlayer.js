@@ -25,14 +25,13 @@ const VideoPlayer = () => {
   return (
     <video
       id="videoPlayer"
-      src="/location.mov" // Replace with the path to your video file
+      src="/assistant.mov" // Replace with the path to your video file
       autoPlay={!videoEnded}
       loop={!videoEnded}
-      muted
       style={{
         position: 'fixed',
         bottom: '0',
-        left: '0',
+        left: '5px',
         width: '200px', // Set the desired width
         zIndex: '9999', // Adjust the z-index to be above other content
         display: videoEnded ? 'none' : 'block',
